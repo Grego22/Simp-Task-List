@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task List</title>
+  </head>
+  <body>
+    <p>Task List</p>
+    <form class="" action="/addTask" method="post">
+      <input type="text" name="description" value="" placeholder="description">
+      <button type "submit" name="button">Add Task</button>
+    </form>
+    <ul>
+      {{#todoListForTheBrowser}}
+      <!-- Inside of here we are in a loop, called once for each -->
+      <button type="button" name="button">Mark Complete</button>
+      <!-- the period below can be used for arrays and number, in the server.js file -->
+        <li>{{.}}</li>
+      {{/todoListForTheBrowser}}
+      <!-- <li>Walk the dog</li>
+        <button type="button" name="button">Mark Complete</button>
+      <li>Feed the Fish</li>
+        <button type="button" name="button">Mark Complete</button>
+      <li>Water the plants</li>
+        <button type="button" name="button">Mark Complete</button>
+      <li>Clean the litterbox</li>
+        <button type="button" name="button">Mark Complete</button> -->
+        <!-- The above code can be factored out like scaffolding  -->
+    </ul>
+    <h2>Completed Tasks</h2>
+    <ul>
+      {{#completedTasksForTheBrowser}}
+      <li>{{.}}</li>
+      {{/completedTasksForTheBrowser}}
+      <!-- same code as above  -->
+    </ul>
+
+  </body>
+</html>
