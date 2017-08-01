@@ -10,6 +10,11 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.engine('mustache', mustacheExpress())
 app.set('views', './views')
 app.set('view engine', 'mustache')
+
+const todoList [
+  completed: true
+]
+
 const taskList = [
   'Walk the dog',
   'Feed the Fish',
@@ -21,6 +26,7 @@ const completedTasks =[
   'read a book',
   'study lecture notes',
 ]
+
 
 //when the user asks for /, I say hello world
 app.get('/', (request, response) =>{
